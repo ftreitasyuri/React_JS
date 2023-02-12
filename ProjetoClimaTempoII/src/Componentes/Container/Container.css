@@ -1,0 +1,131 @@
+.Container{
+
+    margin: 0 auto;
+
+    min-width: 500px;
+    max-width: 900px;
+
+    /* background-color: #333; */
+    border: solid 1px red;
+    padding: 2px;
+    display: grid;
+    
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows:  60% 40%; */
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'pesquisa pesquisa'
+    'textoDinamico textoDinamico'
+    'dataDescri dataDescri'
+    'ladoEsquerdo ladoDireito'
+     ;
+
+    /* gap: 5px; */
+
+    /* grid-template-rows:; */
+
+    /* grid-template-rows: minmax(30px 100px); */
+
+}
+
+.Container div{
+    /* background-color: #0cc929; */
+    /* border: solid 1px blue; */
+    padding: 10px;
+
+}
+
+
+
+#cabecalho{
+    grid-area: cabecalho;
+
+    background-color: #1565C0;
+    
+    
+}
+
+#cabecalho img{
+    width: 100%;
+    height: 5vh;
+    max-width: 450px;
+    max-height: 10vh;
+}
+
+#textoDinamico{
+    grid-area: textoDinamico;
+}
+
+#pesquisa{
+    grid-area: pesquisa;
+
+    background-color: #FFF;
+
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    
+}
+
+#pesquisa div{
+    display: inline-block;
+       
+}
+
+#busca{
+    /* border: solid 3px red; */
+    background-color: #FFF;
+    width: 80%;
+    height: 3.5vh;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
+}
+
+
+#busca input{
+    width: 100%;
+    height: 100%;
+}
+
+#clicar{
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+#botao{
+    background-color: #FFF;
+    font-size: 1.5em;
+    
+    border: none;
+    
+}
+
+
+/* INICIO TEXTO DINAMICO */
+#textoDinamico{
+    
+    text-align: left;
+    
+    
+}
+
+
+/* FIM TEXTO DINAMICO  */
+
+#dataDescri{
+    /* border: solid 3px red; */
+    text-align: left;
+    background-color: #FFF;
+    /* width: 100vw; */
+    
+    grid-area: dataDescri;
+}
+
+
+

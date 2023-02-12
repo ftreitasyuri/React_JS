@@ -1,0 +1,14 @@
+#pessoa {
+    border: solid 5px green;
+    width: 50%;
+    
+}
+
+
+#pessoa img {
+    border: solid 5px red;
+    margin-top: 30px;
+    width: 150px;
+    /* height: 150px; */
+}
+

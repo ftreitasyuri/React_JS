@@ -1,0 +1,137 @@
+#container{
+    /* border: solid 3px red; */
+    margin: 0 5px 0 5px;
+    height: 20vh;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
+    
+}
+
+
+ /* INICIO DA PRIMEIRA SESSAO */
+.naReta{
+    
+    display: inline-block;
+}
+
+.naReta section{
+    display: flex;
+    position: relative;
+    
+}
+.hoje div{
+    display: inline-block;
+}
+
+
+#PrimeiraSessao{
+       
+    /* width: %; */
+    /* border: solid 1px rgb(128, 0, 38); */
+    justify-content: left;
+    height: 13vh;
+    margin-top: -11%;
+    margin-bottom: -30%;
+       
+    /* background-color: rgb(89, 255, 0); */
+}
+
+ 
+
+#PrimeiraSessaoII{
+    /* width: 49%; */
+    /* border: solid 1px green; */
+    justify-content: left;
+    height: 13vh;
+    /* background-color: red; */
+      
+    
+}
+.Seta{
+    /* width: 25%; */
+    text-align: center;
+    /* border: solid 1px green; */
+    /* width: 30%; */
+
+    /* margin-left: -15.3%; */
+    margin: 0px 5vh 0px 0px;
+    
+    /* background-color: pink; */
+}
+
+
+.GrausC{
+    /* border: solid 1px red; */
+    display: flex;
+    /* width: 50%; */
+    /* centralizado dentro de si mesmo */
+    justify-content: center;
+    /* z-index: 1; */
+    /* margin-left: 15vh; */
+    padding: 1vh;
+    /* right: -12vh; */
+        
+}
+
+.GotaDagua{
+    /* border: solid 1px green; */
+    /* display: inline-flex; */
+    /* centralizado dentro de si mesmo */
+    /* justify-content: center;
+    margin-left: 2.5vh;
+    margin-right: -2.5vh; */
+
+        /* width: 25%; */
+        text-align: center;
+        /* border: solid 1px green; */
+        /* width: 30%; */
+    
+        /* margin-left: -15.3%; */
+        margin: 0px 5vh 0px 0px;
+        
+        /* background-color: pink; */
+    
+    
+}
+
+.Milimetros{
+    /* border: solid 1px red; */
+    display: flex;
+    /* centralizado dentro de si mesmo */
+    /* justify-content: center; */
+    /* z-index: 1;
+    margin-left: 10vh; */
+    padding: 1vh;
+    /* margin: 0 0 0 -10px; */
+    text-align: left;
+    
+}
+
+/* FIM DA PRIMEIRA SESSAO */
+
+
+/* INICIO DA SEGUNDA SESSAO */
+#SegundaSessao{
+   /* width: %; */
+    /* border: solid 1px rgb(128, 0, 38); */
+    justify-content: left;
+    height: 13vh;
+    top: 0.6vh;
+    margin-top: -11%;
+    margin-bottom: -30%;
+       
+    /* background-color: rgb(89, 255, 0); */
+}
+
+#SegundaSessaoII{
+    /* width: 49%; */
+    /* border: solid 1px green; */
+    justify-content: left;
+    height: 13vh;
+    /* background-color: red; */
+}
+
+
+
+/* FIM DA SEGUNDA SESSAO */

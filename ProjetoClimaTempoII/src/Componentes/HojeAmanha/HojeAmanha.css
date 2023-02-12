@@ -1,0 +1,61 @@
+
+.ladoEsquerdo {
+    grid-area: ladoEsquerdo;
+
+    /* border: solid 2px red; */
+    padding: 10px;
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.ladoEsquerdoII{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+
+
+
+.ladoDireito {
+    grid-area: ladoDireito;
+    /* border: solid 2px red; */
+
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.ladoDireitoII{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* classe para aplicar tamanho e estilos na font */
+.generico{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.generico i{
+    font-size: 1.3em;
+    
+}
+
+
+#azul{
+    color: rgb(39, 160, 104);
+}
+
+#vermelho{
+    color: rgb(192, 73, 73);
+}
+
+
+
+
+

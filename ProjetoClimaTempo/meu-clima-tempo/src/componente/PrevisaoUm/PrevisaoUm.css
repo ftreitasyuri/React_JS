@@ -1,0 +1,77 @@
+#containerHoje{
+    
+    padding: 2vh;
+    /* border: solid 1px red; */
+    background-color: #EEEEEE;
+ 
+}
+
+#containerHoje section{
+    display: inline-block;
+}
+
+#containerData{
+    text-align: left;
+}
+
+.Inline div{
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+#ladoEsquerdo{
+    /* border: solid 2px red; */
+    margin-right: 10vh;
+    display: flex;
+    position: relative;
+}
+
+#ladoDireito{
+    /* border: solid 2px orange; */
+    
+    margin-right: 6vh;
+    display: flex;
+    position: relative;
+}
+
+
+
+#grausMaximo{
+    color: #0277BD;
+}
+
+#grausMinimo{
+    color: #C83232;
+}
+
+#seta {
+    /* border: solid 1px red; */
+    width: 4vh;
+    font-size: 2em;
+    
+}
+
+#grausC{
+    /* border: solid 1px red; */
+    width: 4vh;
+    font-size: 2em;
+    margin-left: 4vh;
+}
+
+
+#primeiroP{
+
+    padding: 1vh;
+    font-size: 1.5em;
+    text-align: left;
+    width: 85%;
+  
+    /* border: solid 2px red; */
+         
+  }

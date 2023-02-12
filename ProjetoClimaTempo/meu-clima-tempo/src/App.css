@@ -1,0 +1,59 @@
+
+/* --------------------------------------------------------------------------------- */
+.App {
+  text-align: center;
+  /* border: solid 4px red; */
+}
+
+
+#logo {
+  /* width: 100%; */
+  background-color: #1565C0;
+  /* border: solid 4px red; */
+  /* height: 50px; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+/* #logo img{
+  width: 40vh;
+  padding: 15px; 
+  border: solid 4px orange ;
+} */
+
+
+#ConteTi{
+
+  margin-left: 1.4vh;
+
+}
+
+
+/* --------------------------------------------------------------------------------- */
+
+#InputPesquisa div {
+  display: inline-block;
+}
+
+#InputPesquisa{
+  /* border: solid 2px red; */
+  /* width: 100%; */
+  background-color: #fff;
+  
+}
+
+
+#ChegouPesquisa{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 90%;
+  
+  
+  /* border: solid 5px pink; */
+}
+
+#botao{
+  width: 5%;  
+
+  
+}
