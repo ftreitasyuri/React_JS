@@ -2,6 +2,7 @@ import './App.css';
 import Container from './Componentes/Container';
 import { useState } from 'react';
 
+
 function App() {
 
   const [nome, setNome] = useState()
@@ -20,12 +21,9 @@ function App() {
       <Container nome={nome} setNome={setNome} />
 
 
+    
 
-
-
-
-
-
+      
     </div>
   )
 }
