@@ -21,7 +21,7 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
 
     }
 
- 
+
     const [pesquisaPrevisao, setPesquisaPrevisao] = useState()
 
     // const lat = 33.44
@@ -30,11 +30,11 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
     // 
     // função para efetuar a pesquisa na API
 
-    
 
-    const fazendoPesquisa = () => {        
-    //    fetch(`http://api.weatherapi.com/v1/current.json?key=fc9df67e3f6b4fadb8a153948230202&q=${nome}&lang=pt`)
-       fetch(`http://api.weatherapi.com/v1/forecast.json?key=fc9df67e3f6b4fadb8a153948230202&q=${nome}&lang=pt&days=2`)
+
+    const fazendoPesquisa = () => {
+        //    fetch(`http://api.weatherapi.com/v1/current.json?key=fc9df67e3f6b4fadb8a153948230202&q=${nome}&lang=pt`)
+        fetch(`http://api.weatherapi.com/v1/forecast.json?key=fc9df67e3f6b4fadb8a153948230202&q=${nome}&lang=pt&days=2`)
             .then((response) => {
                 console.log('response', response)
 
@@ -52,7 +52,7 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
 
 
     //    let GrauMax = '00'
-    
+
 
     return (
 
@@ -91,12 +91,6 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
                     <h3>Previsão para: <></>
                         {
                             pesquisaPrevisao ? (
-                                // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                                // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
-
-
-
                                 previCidade = pesquisaPrevisao.location.name
 
                             ) : (
@@ -108,69 +102,170 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
                 </div>
             </div>
 
+{/* ------------------------------------------------------------------------------------------------------------ */}
+            <section className='Tudo'>
+                <div id='primeiro'>
+                    <h3>Hoje: <bc />
+                        {
+                            pesquisaPrevisao ? (
+                                diaAtual = pesquisaPrevisao.forecast.forecastday[0].date
+                            ) :
+                                diaAtual = '--/--/--'
+                        }
+                    </h3>
+                    <p>
+                        {
+                            pesquisaPrevisao ? (
+                                descri = pesquisaPrevisao.forecast.forecastday[0].day.condition.text
+                            ) :
+                                descri = 'Descrição'
+                        }
+                    </p>
 
-            {/* <main className='ContainerII'> */}
-
-            {/* <div id='hoje'> */}
-
-
-
-            <section id='tudoInclu'>
-                <div id='dataDescri'>
-                    <h5>Hoje: <></>{
-                        pesquisaPrevisao ? (
-                            // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                            // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
-
-
-
-                            diaAtual = pesquisaPrevisao.location.localtime
-
-                        ) : (
-                            diaAtual = '--/--/----'
-                        )
-
-
-                    }</h5>
-                    <p>{
-                        pesquisaPrevisao ? (
-                            // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                            // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
-
-
-
-                            descri = pesquisaPrevisao.current.condition.text
-
-                        ) : (
-                            descri = 'Descrição'
-                        )
-
-
-                    }</p>
                 </div>
 
+                {/* --------------------------------------------INICIO 1ª PARTE-------------------------------------------------- */}
+                <div className='tudoInclu'>
+                    <div id='parteI'>
+                        <section className='BlocoLinha'>
+                            <div>
+                                <p><i className="bi bi-arrow-up"></i></p>
+                            </div>
+                            <div>
+                                <p className='azul'>
+                                    {
+                                        pesquisaPrevisao ? (
 
 
-                <section className='tudoJunto'>
-                    
-                    <div className='ladoEsquerdo generico'>
-                        <div id='setaCima'>
+                                            GrauMax = pesquisaPrevisao.forecast.forecastday[0].day.maxtemp_c
+
+                                        ) : (
+                                            GrauMax = '00'
+                                        )
+
+
+                                    }
+
+                                    °C
+                                </p>
+                            </div>
+                        </section>
+
+                        <section className='BlocoLinha'>
+                            <div>
+                                <p><i className="bi bi-droplet-fill"></i></p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    {
+                                        pesquisaPrevisao ? (
+                                            mili = pesquisaPrevisao.forecast.forecastday[0].day.totalprecip_mm
+
+                                        ) : (
+                                            mili = '00'
+                                        )
+
+
+                                    }mm
+
+                                </p>
+                            </div>
+                        </section>
+
+                    </div>
+                    {/* ----------------------------------SEPARAÇÃO 1ª E 2ª PARTE--------------------------------- */}
+
+
+                    <div id='parteII'>
+                        <section className='BlocoLinha'>
+                            <div>
+                                <p><i className="bi bi-arrow-down"></i></p>
+                            </div>
+                            <div>
+                            <p className='vermelho'>
+                                    {
+                                        pesquisaPrevisao ? (
+
+                                            GrauMin = pesquisaPrevisao.forecast.forecastday[0].day.mintemp_c
+
+                                        ) : (
+                                            GrauMin = '00'
+                                        )
+
+
+                                    }
+                                    C</p>
+                            </div>
+                        </section>
+
+                        <section className='BlocoLinha'>
+                            <div>
+                                <p><i className="bi bi-umbrella-fill"></i></p>
+                            </div>
+
+                            <div>
+                                <p>
+                                {
+                                        pesquisaPrevisao ? (
+
+                                            chuva = pesquisaPrevisao.forecast.forecastday[0].day.mintemp_c
+
+                                        ) : (
+                                            chuva = '00'
+                                        )
+
+
+                                    }
+                                    %</p>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+            {/* ----------------------------------FINAL DAS 1ª E 2ª PARTE--------------------------------- */}
+
+
+
+            {/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
+
+            {/* --------------------------------------------INICIO 3ª PARTE-------------------------------------------------- */}
+            
+            <section className='TudoII'>
+                <div id='segundo'>
+                    <h3>Amanhã: <bc />
+                        {
+                            pesquisaPrevisao ? (
+                                diaAtual = pesquisaPrevisao.forecast.forecastday[1].date
+                            ) :
+                                diaAtual = '--/--/--'
+                        }
+                    </h3>
+                    <p>
+                        {
+                            pesquisaPrevisao ? (
+                                descri = pesquisaPrevisao.forecast.forecastday[1].day.condition.text
+                            ) :
+                                descri = 'Descrição'
+                        }
+                    </p>
+
+                </div>
+            
+            <div className='tudoInclu'>
+                <div id='parteIII'>
+                    <section className='BlocoLinha'>
+                        <div>
                             <p><i className="bi bi-arrow-up"></i></p>
                         </div>
-
-                        <div id='grausC'>
-                            <p id='azul'>
+                        <div>
+                        <p className='azul'>
                                 {
                                     pesquisaPrevisao ? (
-                                        // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                                        // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
 
 
-                                       
-                                        GrauMax = pesquisaPrevisao.forecast.forecastday[0].day.maxtemp_c
+                                        GrauMax = pesquisaPrevisao.forecast.forecastday[1].day.maxtemp_c
 
                                     ) : (
                                         GrauMax = '00'
@@ -179,45 +274,12 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
 
                                 }
 
-                                °C</p>
+                                °C
+                            </p>
                         </div>
-                    </div>
+                    </section>
 
-                    <div className='ladoDireito generico'>
-                        <div id='setaBaixo'>
-                            <p><i className="bi bi-arrow-down"></i></p>
-                        </div>
-                        <div>
-                            <p id='vermelho'>
-                                {
-                                    pesquisaPrevisao ? (
-                                        // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                                        // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
-
-
-
-                                        GrauMin = pesquisaPrevisao.forecast.forecastday[0].day.mintemp_c
-
-                                    ) : (
-                                        GrauMin = '00'
-                                    )
-
-
-                                }
-
-                                °C</p>
-                        </div>
-                    </div>
-
-
-                    
-                </section>
-
-                <section className='tudoJunto'>
-
-
-                <div className='ladoEsquerdoII generico'>
+                    <section className='BlocoLinha'>
                         <div>
                             <p><i className="bi bi-droplet-fill"></i></p>
                         </div>
@@ -226,69 +288,79 @@ function Container({ setNome, nome, GrauMax, mili, GrauMin, chuva, descri, previ
                             <p>
                                 {
                                     pesquisaPrevisao ? (
-                                        // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
-
-                                        // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
-
-
-
-                                        mili = pesquisaPrevisao.forecast.forecastday[0].day.totalprecip_mm
+                                        mili = pesquisaPrevisao.forecast.forecastday[1].day.totalprecip_mm
 
                                     ) : (
                                         mili = '00'
                                     )
 
 
-                                }
+                                }mm
 
-                                mm</p>
+                            </p>
                         </div>
-                    </div>
+                    </section>
+
+                </div>
+                {/* ----------------------------------SEPARAÇÃO 3ª E 4ª PARTE--------------------------------- */}
 
 
-                    
+                <div id='parteIIII'>
+                    <section className='BlocoLinha'>
+                        <div>
+                            <p><i className="bi bi-arrow-down"></i></p>
+                        </div>
+                        <div>
+                        <p className='vermelho'>
+                                {
+                                    pesquisaPrevisao ? (
 
-                    <div className='ladoDireitoII generico'>
+                                        GrauMin = pesquisaPrevisao.forecast.forecastday[1].day.mintemp_c
+
+                                    ) : (
+                                        GrauMin = '00'
+                                    )
+
+
+                                }
+                                C</p>
+                        </div>
+                    </section>
+
+                    <section className='BlocoLinha'>
                         <div>
                             <p><i className="bi bi-umbrella-fill"></i></p>
                         </div>
 
                         <div>
-                            <p>
+                        <p>
                                 {
-                                    pesquisaPrevisao ? (
-                                        // <Previs aoUm grausMax={MaxGrau} grausMin={MinGrau} />
+                                        pesquisaPrevisao ? (
 
-                                        // MaxGrau = [{pesquisaPrevisao.current.feelslike_c}]
+                                            chuva = pesquisaPrevisao.forecast.forecastday[1].day.mintemp_c
 
-
-
-                                        chuva = pesquisaPrevisao.forecast.forecastday[0].day.daily_chance_of_rain
-
-
-                                    ) : (
-                                        chuva = '00'
-                                    )
+                                        ) : (
+                                            chuva = '00'
+                                        )
 
 
-                                }
-
-                                %</p>
+                                    }
+                                    %</p>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-
-                
+                </div>
+            </div>
 
             </section>
+        
+{/* ----------------------------------FINAL DAS 3ª E 4ª PARTE--------------------------------- */ }
 
 
-            
-            
 
 
-        </div>
+
+        </div >
 
     )
 }

@@ -19,8 +19,11 @@
     'pesquisa pesquisa'
     'textoDinamico textoDinamico'
     'dataDescri dataDescri'
+    'Tudo Tudo'
+    'primeiro primeiro'
     'tudoInclu tudoInclu'
-    'ladoEsquerdo ladoDireito'
+    'TudoII TudoII'
+    
 
      ;
 
@@ -130,61 +133,98 @@
 
 /* FIM TEXTO DINAMICO  */
 
-#dataDescri{
-    /* border: solid 3px red; */
-    text-align: left;
-    margin-top: -5px;
-    background-color: #fff;
-    border-radius: 2px;
+/* ----------------------------------- INICIO tudoInclu ------------------------------------------- */
+
+.Tudo{
+
+    margin: 0 auto;
+    /* border: solid 2px red; */
+    width: 95%;
+    grid-area: Tudo;
+
+    /* padding: 20px; */
+    text-align: center;
+    align-items: center;
+
+    margin-top: -15px;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.TudoII{
+
+    margin: 0 auto;
+    /* border: solid 2px red; */
+    width: 95%;
+    grid-area: TudoII;
+
+    /* padding: 20px; */
+    text-align: center;
+    align-items: center;
+
+    /* margin-top: -10px; */
     box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
 
-    grid-area: dataDescri;
+ 
 }
 
 
-#dataDescri h5{
-      /* background-color: red; */
-      margin-top: -3px;
-      margin-bottom: -10px;
-}
 
-#dataDescri p{
-    /* background-color: red; */
-    margin-bottom: -5px;
-}
-
-#tudoInclu{
-    grid-area: tudoInclu;   
-    padding: 20px;
-    margin-top: -5vh;
-    
-    
-
-}
-
-#tudoInclu section{
-    /* background-color: red; */
-
-
-    display: inline-block;
-    justify-content: space-around;
-
+.tudoInclu {
     /* border: solid 2px red; */
-    
-}
+    width: 95%;
 
-
-.tudoJunto  {
-    
-    
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
-    
-    height: 100px;
-    
-}
-
-#tudoInclu .tudoJunto{
+    grid-area: tudoInclu;
     display: flex;
     justify-content: space-around;
-    /* border: solid 2px red; */
+    
+    font-size: 1.5em;
+
 }
+
+#primeiro, #segundo{
+    
+    /* border: solid 2px red; */
+    background-color: #fff;
+    grid-area: primeiro;    
+
+    text-align: left;
+
+}
+
+#primeiro, #segundo p{
+    font-size: 1.2em;
+    color: black;
+
+}
+
+/* geral */
+
+.BlocoLinha{
+    text-align: left;
+}
+
+.BlocoLinha div{
+    display: inline-block;
+    
+}
+
+
+/* fim geral */
+
+#parteI{
+    grid-area: parteI;
+    
+}
+
+
+#parteII{
+    grid-area: parteII;
+}
+
+
+/* -----------------------Inicio 3ª e 4ª parte---------------------- */
+
+
+
+
+

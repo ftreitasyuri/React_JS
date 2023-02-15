@@ -47,14 +47,13 @@
 }
 
 
-#azul{
-    color: rgb(39, 160, 104);
+.azul{
+    color: rgb(23, 108, 187);
 }
 
-#vermelho{
+.vermelho{
     color: rgb(192, 73, 73);
 }
-
 
 
 
