@@ -15,6 +15,8 @@ Nessa versão do projeto ainda foi criado:
   Estilização para o campo busca;
   Efeitos ao passar o mouse nos componentes;
   Media Query para layouts alternativos em diferentes telas;
+  Tratativas de possíveis erros com a API;
+  Direcionamento para outra API, caso dê erro no GET.
   
   
   
