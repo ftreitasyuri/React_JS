@@ -10,7 +10,8 @@ Foi utilizado a API do site www.weatherapi.com, para fazer as requisições/GET 
 
 Obs:
 
-Nessa versão do projeto ainda foi criado:
+Essa versão do projeto não contempla:
+
   AutoComplete do campo busca;
   Estilização para o campo busca;
   Efeitos ao passar o mouse nos componentes;
