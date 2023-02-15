@@ -2,7 +2,7 @@
 
 Este projeto tem como finalidade o estudo de programação full stack, utilizando (HTML5, CSS3, JavaScript e ReactJs);
 
-O layout foi desenvolvido 100% em css sem a utilização de libs ou bootstrap, usando css grid e flex;
+O layout foi desenvolvido 100% em css sem a utilização de libs ou bootstrap;
 
 Os icones são do bootStrapIcons;
 
